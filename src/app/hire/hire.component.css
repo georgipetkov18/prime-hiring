@@ -35,3 +35,8 @@ button {
 .form-group {
     margin-top: 1rem;
 }
+
+img {
+    object-fit: cover;
+    height: 200px;
+}

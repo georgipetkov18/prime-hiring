@@ -1,3 +1,8 @@
 button {
     margin: 0.4rem
 }
+
+img {
+    object-fit: cover;
+    height: 200px;
+}

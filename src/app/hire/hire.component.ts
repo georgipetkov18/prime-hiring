@@ -81,7 +81,7 @@ export class HireComponent implements OnInit {
       this.error.message = 'Developers are already hired: ' + 
         this.alreadyHiredDevelopers
         .map(dev => dev.email)
-        .reduce((acc, email) => acc+=`${email}, `, '')
+        .reduce((acc, email) => acc+=`${email} || `, '')
       return;
     }
     let notHiredDevelopers = this.toBeHiredDevelopers.filter(d =>
