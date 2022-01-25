@@ -1,0 +1,19 @@
+<div class="group-item">
+    <div>
+        <p><strong>Name:</strong> {{developer.name}}</p>
+        <p><strong>Email:</strong> {{developer.email}}</p>
+        <p><strong>Phone:</strong> {{developer.phoneNumber}}</p>
+        <p><strong>Location:</strong> {{developer.location}}</p>
+        <p><strong>Price </strong>Per Hour: {{developer.pricePerHour}}</p>
+        <p><strong>Technology:</strong> {{developer.technology}}</p>
+        <p><strong>Description:</strong> {{developer.description}}</p>
+        <p><strong>Years </strong>of Experience: {{developer.yearsOfExperience}}</p>
+        <p><strong>Native Language</strong>: {{developer.nativeLanguage}}</p>
+        <p><strong>LinkedIn:</strong> {{developer.linkedInLink}}</p>
+        <button class="btn btn-primary" (click)="onHire()">Hire</button>
+        <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+    <div>
+        <img [src]="developer.profilePicUrl" [alt]="developer.name">
+    </div>
+</div>

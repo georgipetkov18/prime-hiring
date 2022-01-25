@@ -1,0 +1,37 @@
+.container {
+    margin-top: 2rem;
+    padding: 0;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+button {
+    margin-top: 1rem;
+}
+
+.hire-item {
+    width: min-content;
+    margin: 0.7rem;
+    padding: 0.4rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.cross {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.error-block {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: rgb(246, 168, 168);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-top: 1rem;
+}

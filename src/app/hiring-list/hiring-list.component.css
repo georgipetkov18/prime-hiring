@@ -1,0 +1,17 @@
+.container {
+    margin-top: 1rem;
+}
+
+.group-list {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 0.4rem;
+}
+
+.group-item {
+    border-bottom: 1px solid gray;
+}
+
+.group-item:last-of-type {
+    border: none;
+}

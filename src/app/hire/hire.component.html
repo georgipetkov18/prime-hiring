@@ -1,0 +1,46 @@
+<div class="container">
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" class="form-control" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" name="endDate" class="form-control" ngModel required>
+        </div>
+
+        <div *ngIf="toBeHiredDevelopers.length > 0" class="row">
+            <div class="hire-item col-xs-3" *ngFor="let developer of toBeHiredDevelopers">
+                {{developer.email}}<span class="cross" (click)="onRemove(developer)">&times;</span>
+            </div>
+        </div>
+
+        <div class="error-block" *ngIf="error.occured">
+            {{error.message}}
+        </div>
+
+        <button type="submit" class="btn btn-success">Hire</button>
+    </form>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let developer of developers; let i = index">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="developer.profilePicUrl" [alt]="developer.name">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{developer.name}}</h5>
+                    <p class="card-text">{{developer.description}}</p>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <button class="btn btn-success" (click)="onHire(developer)">Add to Hire List</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

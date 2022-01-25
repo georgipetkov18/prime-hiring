@@ -1,0 +1,15 @@
+<h2 class="text-center" *ngIf="information.length <= 0">No one is hired yet</h2>
+
+<div class="container" *ngIf="information.length > 0">
+    <div class="group-list">
+        <div class="group-item" *ngFor="let info of information">
+            <div><strong>Start Date</strong>: {{info.startDate.toString()}}</div>
+            <div><strong>End Date</strong>: {{info.endDate.toString()}}</div>
+            <div><strong>Developers</strong>: 
+                <span *ngFor="let developer of info.developers ">
+                    {{developer.email}} |
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
