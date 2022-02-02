@@ -14,10 +14,10 @@ export class HiringService {
         let developerJobs = this.hiringInformation.filter(i => i.developers.includes(developer));
 
             return developerJobs.some(j => 
-                (j.startDate.getTime() < startDate.getTime() &&
-                startDate.getTime() < j.endDate.getTime()) || 
-                (j.startDate.getTime() < endDate.getTime() &&
-                endDate.getTime() < j.endDate.getTime()))
+                (j.startDate.getTime() <= startDate.getTime() &&
+                startDate.getTime() <= j.endDate.getTime()) || 
+                (j.startDate.getTime() <= endDate.getTime() &&
+                endDate.getTime() <= j.endDate.getTime()))
     }
 
     hireDevelopers(developers: Developer[], startDate: Date, endDate: Date) {

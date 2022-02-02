@@ -64,7 +64,8 @@ export class HireComponent implements OnInit {
     if (isNaN(startDate.getTime()) ||
       isNaN(endDate.getTime()) ||
       startDate.getTime() < new Date().getTime() ||
-      endDate.getTime() < new Date().getTime()) {
+      endDate.getTime() < new Date().getTime() || 
+      endDate < startDate){
         this.error.occured = true;
         this.error.message = 'You cannot assign date in the past';
       return;
@@ -73,8 +74,6 @@ export class HireComponent implements OnInit {
     this.alreadyHiredDevelopers = this.toBeHiredDevelopers.filter(d =>
       this.hiringService.isHired(d, startDate, endDate)
     );
-
-      console.log(this.alreadyHiredDevelopers);
       
     if (this.alreadyHiredDevelopers.length > 0) {
       this.error.occured = true;
@@ -90,5 +89,4 @@ export class HireComponent implements OnInit {
     this.hiringService.hireDevelopers(notHiredDevelopers, startDate, endDate);
     this.router.navigate(['/hiring-list'])
   }
-
 }
